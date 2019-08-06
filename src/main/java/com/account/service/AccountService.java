@@ -9,4 +9,6 @@ public interface AccountService {
 	List<Account> getAllAccounts();
 	Account getAnAccount(Long accountId);
 	Account createAccount(Account account);
+	String deleteAccount(Long accountId);
+	
 }
