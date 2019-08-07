@@ -1,4 +1,4 @@
-package com.consumer.Listener;
+package com.consumer.listener;
 
 
 
@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jms.annotation.JmsListener;
 import org.springframework.stereotype.Component;
 
-import com.consumer.entity.AccountSent;
+import com.consumer.entity.SentAccount;
 import com.consumer.repository.AccountConsumerRepository;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -21,19 +21,16 @@ public class AccountListener {
 		this.repo = repo;
 	}
 	
-	@JmsListener(destination = "AccountQueue", containerFactory = "jmsFactory")
-	public void recieveAccount(String account) throws Exception {
-		ObjectMapper objectMapper = new ObjectMapper();
-		
-		System.out.println("Received <" + account + ">");
-		
-		//converting string to AccountSent object
-		AccountSent newAccount = objectMapper.readValue(account, AccountSent.class);
 
+	
+	@JmsListener(destination = "AccountQueue", containerFactory = "jmsFactory")
+	public void recieveAccount(SentAccount account) {
+	
+		
 		//persist to mongodb
-		 repo.save(newAccount);
+		 repo.save(account);
 		 
-		 System.out.println(account + " processed ...");
+		
 	}
 	
 }

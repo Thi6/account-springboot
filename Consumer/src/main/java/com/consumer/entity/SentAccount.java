@@ -1,6 +1,6 @@
 package com.consumer.entity;
 
-public class AccountSent {
+public class SentAccount {
 
 	private String accountId;
 
@@ -12,11 +12,11 @@ public class AccountSent {
 
 	private String prize;
 
-	public AccountSent() {
+	public SentAccount() {
 
 	}
 
-	public AccountSent(AccountSent account) {
+	public SentAccount(SentAccount account) {
 		this.accountId = account.getAccountId();
 		this.firstName = account.getFirstName();
 		this.lastName = account.getLastName();
