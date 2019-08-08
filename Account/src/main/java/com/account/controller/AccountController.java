@@ -56,8 +56,8 @@ public class AccountController {
 	
 	@PostMapping("/create")
 	public Account createAccount(@RequestBody Account account) {
-		String exchangeNum = restTemplate.getForObject("http://localhost:8082/genAccountNum", String.class);
-		String exchangePrize = restTemplate.getForObject("http://localhost:8083/genPrize", String.class);
+		String exchangeNum = restTemplate.getForObject("numgen/genAccountNum", String.class);
+		String exchangePrize = restTemplate.getForObject("prizegen/genPrize", String.class);
 		account.setAccountNum(exchangeNum);
 		account.setPrize(exchangePrize);
 //		return exchangeNum;

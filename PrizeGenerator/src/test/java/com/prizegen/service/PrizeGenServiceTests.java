@@ -1,17 +1,17 @@
-package com.prizegen.service;
+//package com.prizegen.service;
 
-import static org.junit.Assert.assertEquals;
+//import static org.junit.Assert.assertEquals;
 
-import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.mockito.InjectMocks;
-import org.springframework.test.context.junit4.SpringRunner;
+//import org.junit.Test;
+//import org.junit.runner.RunWith;
+//import org.mockito.InjectMocks;
+//import org.springframework.test.context.junit4.SpringRunner;
 
-@RunWith(SpringRunner.class)
-public class PrizeGenServiceTests {
+//@RunWith(SpringRunner.class)
+//public class PrizeGenServiceTests {
     
-    @InjectMocks
-    private PrizeGenServiceImplementation service;
+//    @InjectMocks
+//    private PrizeGenServiceImplementation service;
     
 //    @Test
 //    public void prizeGen6Test() {
@@ -33,4 +33,4 @@ public class PrizeGenServiceTests {
 //        assertEquals("£5,000", service.generatePrize("b0123456789"));
 //        assertEquals("£10,000", service.generatePrize("c0123456789"));
 //    }
-}
+//}
